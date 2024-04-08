@@ -1,0 +1,26 @@
+.swiper {
+    width: 80vw;
+    /* height: 500px; */
+  }
+  
+  .swiper-slide {
+    width: 200px;
+    /* height: 500px; */
+
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide card {
+    /* margin-inline-end: 40px; */
+    display: block;
+    min-width: 350px;
+    width: 250px;
+    object-fit: cover;
+  }

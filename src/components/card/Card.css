@@ -1,0 +1,24 @@
+.cardBox{
+    border: white 2px  solid;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    min-width: 250px;
+    width: 250px;
+    color: white;
+    border: linear-gradient(137.06deg, #FFFFFF -1.38%, rgba(255, 255, 255, 0) 97.25%);
+
+}
+.bookCover{
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 350px;
+    width: 200px;
+
+    border: Mixed solid;
+
+}

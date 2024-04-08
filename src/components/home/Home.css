@@ -1,0 +1,158 @@
+.home {
+    width: 80vw;
+}
+
+.home1 {
+    margin-top: 80px;
+}
+
+.homel1 {
+    margin-top: 80px;
+}
+
+.texthead1 {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+}
+
+.texthead2 {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+
+}
+
+.explorebtn {
+    width: 150px;
+    height: 60px;
+    background: #2C284A;
+
+    border: 1px solid #FFFFFF;
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.exploretxt {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.section1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section2 {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bestsellertxgt {
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.cardswrap1 {
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.horizLine1 {
+    margin-top: 84px;
+    margin-bottom: 80px;
+
+    width: 90vw;
+    /* Adjust width as needed */
+    height: 4px;
+    /* Adjust height as needed */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #CBCBCB 50.5%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+}
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 200px;
+}
+
+.newarrivals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 60px;
+}
+
+.newarrivalsTxt {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.newarrivalPara {
+    max-width: 800px;
+
+    color: rgba(193, 193, 193, 1);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+
+}
+
+.courosoul2 {
+    display: flex;
+    gap: 12px;
+
+    max-width: 80vw;
+
+    overflow-x: scroll;
+    margin-bottom: 100px;
+
+
+}
+
+.reviews{
+    display: flex;
+    gap: 20px;
+}
+
+.customerReviews {
+    background: rgba(217, 217, 217, 1);
+    width: 450px;
+    height: 450px;
+    border-radius: 8px 0px 0px 0px;
+
+}
