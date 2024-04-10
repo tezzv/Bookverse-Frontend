@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Card from './components/card/Card';
 import Home from './components/home/Home';
+import BookUpload from './components/Dashboard/BookUpload';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       {/* <h1>Bookverse</h1> */}
       <BrowserRouter>
-        <Home />
+      <BookUpload/>
+        {/* <Home /> */}
         {/* <Navbar />
         <Card /> */}
       </BrowserRouter>
