@@ -1,0 +1,19 @@
+.dashboardlabel {
+    height: 100vh;
+    width: 250px;
+    background: rgba(48, 48, 48, 1);
+    /* background: rgb(194, 52, 52); */
+    box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 26px;
+}
+
+
+
+/* For screens narrower than 650px */
+@media (max-width: 650px) {
+    .dashboardlabel {
+        /* transform: scale(.8); */
+        width: 150px;
+        margin-right: 0px;
+    }
+}
