@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 import './BookDetail.css';
@@ -8,7 +8,36 @@ import bookCover from '../../assets/bookcoverSample.png'
 
 const BookDetail = () => {
     const { bookID } = useParams();
-    console.log(bookID);
+    // console.log(bookID);
+    const [book, setBook] = useState('');
+
+    let host = "http://localhost:5000"; // Default host for development
+
+    const bookDetails = async () => {
+        // API Call
+        try {
+            const response = await fetch(`${host}/api/books/bookdetail/${bookID}`, {
+                method: "GET",
+            });
+
+            const result = await response.json();
+            // console.log("Success:", result);
+            if (!result.error) {
+                // console.log(result.book);
+                setBook(result.book);
+            } else {
+                alert("Error: ", result.error)
+            }
+        } catch (error) {
+            alert("Error: ", error)
+        }
+        
+    }
+
+
+    useEffect(() => {
+        bookDetails();
+    }, [])
 
     return (
         <div>
@@ -16,11 +45,11 @@ const BookDetail = () => {
             <div className='bookdetails1'>
                 <div className='bookdetailleft1'>
                     <div className='bookimgdiv1'>
-                        <img src={bookCover} className='bookimgdim1' alt='add to cart' />
+                        <img src={book.coverlink} className='bookimgdim1' alt='add to cart' />
                     </div>
                     <button className='buynowbtn1'>
                         <div>BUY NOW</div>
-                        <div style={{ fontSize: '20px' }}>₹ 50/-</div>
+                        <div style={{ fontSize: '20px' }}>₹ {book.price}/-</div>
                     </button>
                     <button className='addtocartbtn1'>
                         <div>ADD TO CART
@@ -33,24 +62,24 @@ const BookDetail = () => {
                         </div>
                         <div className='uploadedbyuser3' >
                             <img src={usericon} alt='add to cart' />
-                            <span className='uploadedbyuser1'>tejveer singh</span>
+                            <span className='uploadedbyuser1'>{book.uploadedby}</span>
                         </div>
                     </div>
                     <div className='hrlinebook2' />
                 </div>
                 <div className='bookdetailright1'>
-                    <div className='booktitle1'>Book Title</div>
-                    <div className='author1txt'>-author</div>
+                    <div className='booktitle1'>{book.title}</div>
+                    <div className='author1txt'>-{book.author}</div>
                     <div style={{ marginTop: '24px' }}>
                         <div className='hrlinebook1' />
-                        <div className='bookgenre1'>Genre : Romance</div>
+                        <div className='bookgenre1'>Genre : {book.genre}</div>
                         <div className='hrlinebook1' />
                     </div>
                     <div className='descriptionhead1'>
                         Description :
                     </div>
                     <div className='description1'>
-                        Download New Moon by Stephenie Meyer Pdf book free online. Edward Cullen is the one thing that Bella Swan values more than life itself. However, Bella had no idea how hazardous it would be to fall in love with a vampire. Although Edward has already saved Bella from the grasp of one evil vampire, they now understand that their problems might just be just beginning as their daring relationship threatens everything they hold dear.
+                        {book.description}
                     </div>
                 </div>
             </div>

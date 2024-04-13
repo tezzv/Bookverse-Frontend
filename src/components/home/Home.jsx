@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import './Home.css';
 import Navbar from '../navbar/Navbar';
 import { Link } from 'react-router-dom';
@@ -6,8 +6,16 @@ import homecorsoul from '../../assets/Group 1.png'
 import Card from '../card/Card';
 import Banner from './Banner';
 import NewArrivals from './NewArrivals';
+import BookContext from '../../context/Bookcontext';
 
 const Home = () => {
+    const context = useContext(BookContext);
+    const { allBooks } = context;
+
+    useEffect(() => {
+        allBooks();
+    }, [])
+
     return (
         <div className='home container'>
             <Navbar />
@@ -68,7 +76,7 @@ const Home = () => {
                 </div>
                 <div className="section4">
                     <h4 className='newarrivalsTxt'>
-                    OUR CUSTOMERS
+                        OUR CUSTOMERS
                     </h4>
                     <div className='reviews'>
                         <div className='customerReviews' />

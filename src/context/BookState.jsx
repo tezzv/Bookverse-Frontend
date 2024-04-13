@@ -55,6 +55,29 @@ const BookState = (props) => {
         setBook({ title: "", description: "", author: "", price: 0, genre: "fiction", coverlink: "", pdflink: "" });
     }
 
+    // get all books
+
+    const allBooks = async () => {
+        // API Call
+        try {
+            const response = await fetch(`${host}/api/books/fetchallbooks`, {
+                method: "GET",
+            });
+
+            const result = await response.json();
+            // console.log("Success:", result);
+            if (!result.error) {
+                // console.log(result);
+                setBooks(result);
+            } else {
+                alert("Error: ", result.error)
+            }
+        } catch (error) {
+            alert("Error: ", error)
+        }
+
+    }
+
 
 
 
@@ -64,7 +87,7 @@ const BookState = (props) => {
 
     return (
         <BookContext.Provider value={{
-            books, uploadBook, book, setBook, setBooks
+            books, uploadBook, book, setBook, setBooks, allBooks
         }}>
             {props.children}
         </BookContext.Provider>
