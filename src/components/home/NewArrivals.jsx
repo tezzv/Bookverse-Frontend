@@ -1,22 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
-// Import Swiper React components
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// import './styles.css';
-
-// import required modules
 import { Pagination } from 'swiper/modules';
 import './NewArrivals.css';
-import homecorsoul2 from '../../assets/bookcoverSample.png'
 import Card from '../card/Card';
+import BookContext from '../../context/Bookcontext';
+import { Link } from 'react-router-dom';
 
 const NewArrivals = () => {
+    const context = useContext(BookContext);
+    const { books } = context;
+
     const [numberOfSlides, setnumberOfSlides] = useState(window.innerWidth / 350);
-   
+
     useEffect(() => {
         const handleResize = () => {
             const x = window.innerWidth;
@@ -44,33 +42,11 @@ const NewArrivals = () => {
                 modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide >
-                    <Card />
-                </SwiperSlide>
-                <SwiperSlide >
-                    <Card />
-                </SwiperSlide>
-                <SwiperSlide >
-                    <Card />
-                </SwiperSlide>
-                <SwiperSlide >
-                    <Card />
-                </SwiperSlide>
-                <SwiperSlide >
-                    <Card />
-                </SwiperSlide>
-                {/* <SwiperSlide className='mx-3'>
-                    <img src={homecorsoul2} style={{ width: '300px', height: '500px' }} alt='fdf' />
-                </SwiperSlide>
-                <SwiperSlide className='mx-3'>
-                    <img src={homecorsoul2} style={{ width: '300px', height: '500px' }} alt='fdf' />
-                </SwiperSlide>
-                <SwiperSlide className='mx-3'>
-                    <img src={homecorsoul2} style={{ width: '300px', height: '500px' }} alt='fdf' />
-                </SwiperSlide>
-                <SwiperSlide className='mx-3'>
-                    <img src={homecorsoul2} style={{ width: '300px', height: '500px' }} alt='fdf' />
-                </SwiperSlide> */}
+                {books.map((book) => (
+                    <div key={book._id}><SwiperSlide >
+                        <Link style={{textDecoration: 'none'}} to={`/bookdetail/${book._id}`}><Card book={book} /></Link>
+                    </SwiperSlide></div>
+                ))}
             </Swiper>
         </div>
     )
