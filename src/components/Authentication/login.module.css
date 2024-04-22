@@ -1,0 +1,58 @@
+.anim1 {
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+
+.authContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .authContainer1 {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  
+    border-style: solid;
+    border-color: rgb(234, 231, 234);
+    border-width: 0 0 0 .01rem;
+  
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(176, 173, 176, 1);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(176, 173, 176, 1);
+    box-shadow: 10px 10px 5px -3px rgba(176, 173, 176, 1);
+  }
+  
+  .authContainer1Login {
+    margin-top: 6rem;
+  }
+  
+  .authContainer1 form {
+    margin: 1rem;
+  }
+  
+  .authHeading1 {
+    display: flex;
+    justify-content: center;
+    background-color: #0d6efd;
+    margin-bottom: 1rem;
+  
+  }
+  
+
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+        transform: rotateX(-100deg);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
+    }
+}

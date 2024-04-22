@@ -88,7 +88,7 @@ const BookState = (props) => {
 
     return (
         <BookContext.Provider value={{
-            books, uploadBook, book, setBook, setBooks, allBooks
+            books, uploadBook, book, setBook, setBooks, allBooks, host
         }}>
             {props.children}
         </BookContext.Provider>

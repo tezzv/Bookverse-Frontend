@@ -8,6 +8,8 @@ import BookState from './context/BookState';
 import BookDetail from './components/BookDetail/BookDetail';
 import Testpayment from './components/payment/Testpayment';
 import PaymentStatus from './components/payment/PaymentStatus';
+import Signup from './components/Authentication/Signup';
+import Login from './components/Authentication/Login';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route exact path="/bookdetail/:bookID" element={<BookDetail />} />
             <Route exact path="/testpayment" element={<Testpayment />} />
             <Route exact path="/status/:orderId" element={<PaymentStatus />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/login" element={<Login />} />
           </Routes>
 
         </BrowserRouter>
