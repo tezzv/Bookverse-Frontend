@@ -10,6 +10,7 @@ import Testpayment from './components/payment/Testpayment';
 import PaymentStatus from './components/payment/PaymentStatus';
 import Signup from './components/Authentication/Signup';
 import Login from './components/Authentication/Login';
+import Shop from './components/shop/Shop';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/status/:orderId" element={<PaymentStatus />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
+            <Route exact path="/shop" element={<Shop />} />
           </Routes>
 
         </BrowserRouter>

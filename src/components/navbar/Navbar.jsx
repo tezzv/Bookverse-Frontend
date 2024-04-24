@@ -1,9 +1,9 @@
 import React from 'react'
 import './Navbar.css'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Navbar = () => {
-    const navigate = useNavigate();
 
     const logouthandler = () => {
         const confirmed = window.confirm('Are you sure you want to Logout?');
@@ -20,8 +20,16 @@ const Navbar = () => {
             <div className='tabs'>
                 {/* <Link to="/">csdac</Link> */}
                 <Link to='/' className='tabName'>HOME</Link>
-                <Link to='/' className='tabName'>SHOP</Link>
-                <Link to='/dashboard/uploadbook' className='tabName'>SELL YOUR BOOK</Link>
+                <Link to='/shop' className='tabName'>SHOP</Link>
+                {
+                    localStorage.getItem('token') &&
+                    <Link to='/dashboard/uploadbook' className='tabName'>SELL YOUR BOOK</Link>
+                }
+                {
+                    !localStorage.getItem('token') &&
+                    <Link to='/login' className='tabName'>SELL YOUR BOOK</Link>
+                }
+
                 {
                     !localStorage.getItem('token') &&
 
@@ -40,7 +48,9 @@ const Navbar = () => {
                     </div>
                 }
             </div>
-            <div className="search">jhng</div>
+            <div className="search">
+               <SearchBar /> 
+            </div>
         </div>
     )
 }

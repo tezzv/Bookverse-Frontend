@@ -34,7 +34,7 @@ const Home = () => {
                             </p>
                         </p>
                         <div className='explorebtn'>
-                            <Link className='exploretxt' to='/'>Explore</Link>
+                            <Link className='exploretxt' to='/shop'>Explore</Link>
                         </div>
                     </div>
                     <div>

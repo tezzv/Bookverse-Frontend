@@ -1,0 +1,65 @@
+
+
+
+.books-radio-buttons {
+    display: none;
+}
+
+
+
+.bookslabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    width: 95px;
+    height: 40px;
+    padding: 4px 12px 4px 12px;
+
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(217, 217, 217, 1);
+
+
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 50px;
+}
+
+.bookslabel:hover {
+    background-color: rgba(75, 116, 234, 1);
+    /* transform: scale(1.1); */
+}
+
+#thriller:checked+.thrillerbutton {
+    background-color: rgba(75, 116, 234, 1);
+    transform: scale(1.1);
+}
+
+#romance:checked+.romancebutton {
+    background-color: rgba(75, 116, 234, 1);
+    transform: scale(1.1);
+}
+
+#horror:checked+.horrorbutton {
+    background-color: rgba(75, 116, 234, 1);
+    transform: scale(1.1);
+}
+
+#fiction:checked+.fictionbutton {
+    background-color: rgba(75, 116, 234, 1);
+    transform: scale(1.1);
+}
+
+#all:checked+.allbutton {
+    background-color: rgba(75, 116, 234, 1);
+    transform: scale(1.1);
+}
