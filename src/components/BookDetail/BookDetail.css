@@ -2,6 +2,9 @@
     display: flex;
     gap: 78px;
     justify-content: center;
+
+    margin-left: 12px;
+    margin-right: 8px;
 }
 
 .bookdetailleft1 {

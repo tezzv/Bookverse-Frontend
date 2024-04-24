@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import './Home.css';
 import Navbar from '../navbar/Navbar';
 import { Link } from 'react-router-dom';
-import homecorsoul from '../../assets/Group 1.png'
 import Card from '../card/Card';
 import Banner from './Banner';
 import NewArrivals from './NewArrivals';
@@ -10,7 +9,7 @@ import BookContext from '../../context/Bookcontext';
 
 const Home = () => {
     const context = useContext(BookContext);
-    const { allBooks } = context;
+    const { allBooks, books } = context;
 
     useEffect(() => {
         allBooks();
@@ -39,7 +38,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div>
-                        {/* <img src={homecorsoul} style={{ width: '400px' }} alt='dsf' /> */}
                         <Banner />
                     </div>
                 </div>
@@ -47,14 +45,9 @@ const Home = () => {
                 <div className='section2'>
                     <h2 className='bestsellertxgt'>BEST SELLER’S</h2>
                     <div className='cardswrap1'>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                        {books.map((book) => (
+                            <div key={book._id}><Link style={{textDecoration: 'none'}} to={`/bookdetail/${book._id}`}><Card book={book} /></Link></div>
+                        ))}
                     </div>
                     <div className='horizLine1' />
                 </div>
@@ -69,7 +62,6 @@ const Home = () => {
                         </p>
                     </div>
                     <div className='courosoul2D'>
-                        {/* <Card /> */}
                         <NewArrivals />
                     </div>
                     <div className='horizLine1' />

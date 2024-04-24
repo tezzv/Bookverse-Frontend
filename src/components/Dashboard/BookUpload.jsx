@@ -10,6 +10,7 @@ function BookUpload() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         uploadBook();
+        console.log(book);
     }
 
 

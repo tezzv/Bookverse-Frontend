@@ -4,23 +4,23 @@
   }
   
   .swiper-slide {
-    width: 200px;
+    /* width: 200px; */
     /* height: 500px; */
 
-    text-align: center;
-    font-size: 18px;
+    /* text-align: center; */
+    /* font-size: 18px; */
     /* background: #fff; */
   
     /* Center slide text vertically */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   
   .swiper-slide card {
     /* margin-inline-end: 40px; */
-    display: block;
-    min-width: 350px;
+    /* display: block;
+    max-width: 350px;
     width: 250px;
-    object-fit: cover;
+    object-fit: cover; */
   }

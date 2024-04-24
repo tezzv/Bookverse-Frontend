@@ -21,7 +21,7 @@ const BookState = (props) => {
         // API Call
 
         try {
-            const response = await fetch({ host }, {
+            const response = await fetch(`${host}/api/books/addbook`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,7 +31,8 @@ const BookState = (props) => {
                     "title": book.title, "description": book.description,
                     "author": book.author, "price": book.price,
                     "pdflink": book.pdflink, "coverlink": book.coverlink,
-                    "uploadedby": "Bookverse"
+                    "uploadedby": "Bookverse",
+                    "genre": book.genre
                 }),
             });
 

@@ -5,20 +5,21 @@ import bookCover from '../../assets/bookcoverSample.png'
 
 
 const Card = (props) => {
+    // console.log(props);
     return (
         <div className='cardBox'>
             {/* <img src={cartIcon} alt="asdfd" /> */}
-            <img className='bookCover' src={bookCover} alt="asdfd" />
+            <img className='bookCover' src={props.book.coverlink} alt="asdfd" />
             <div className='justifyflexrow' style={{ width: '200px' }}>
-                <div>
+                <div style={{width: '150px'}}>
 
-                    <p>{props.bookName} book name</p>
-                    <p>{props.authorName} author name</p>
+                    <p>{props.book.title}</p>
+                    <p>-{props.book.author}</p>
 
                 </div>
                 <div>
 
-                    <p>{props.price} price</p>
+                    <p>₹ {props.book.price}/-</p>
                     <img src={cartIcon} alt="safd" />
 
                 </div>
